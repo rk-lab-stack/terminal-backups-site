@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Terminal — personal PostgreSQL recovery</title>
+<meta name="description" content="Public information and privacy disclosures for a personal PostgreSQL backup utility under development.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="page-shell">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="index.html" aria-label="Terminal home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Terminal <strong>Backup utility</strong></span></a><nav aria-label="Main navigation"><a href="index.html" aria-current="page">Overview</a><a href="privacy.html">Privacy</a><a href="terms.html">Usage terms</a></nav></header>
+<main id="main"><section class="hero">
+<p class="eyebrow">PostgreSQL · Google Drive · Personal use</p>
+<h1>A clear plan for<br><em>backup and recovery.</em></h1>
+<p class="lead">A personal PostgreSQL backup utility designed to keep dated recovery copies in the owner's Google Drive.</p>
+<p class="status"><span aria-hidden="true"></span>In development — Drive authorization and recovery testing are pending.</p>
+<div class="actions"><a class="button" href="privacy.html">Read the privacy policy <span aria-hidden="true">↗</span></a><a class="text-link" href="mailto:capitalvision4fx@gmail.com">Contact the owner</a></div>
+</section>
+<section class="section" aria-labelledby="workflow"><div class="section-heading"><p class="eyebrow">The intended workflow</p><h2 id="workflow">Create. Protect. Verify.</h2><p>The workflow below describes the design being built and verified. Automated backup collection is not currently active.</p></div>
+<div class="steps"><article><span class="step-number">01</span><h3>Create a recovery copy</h3><p>Create a consistent PostgreSQL archive on the owner's VPS, with UTC timestamps and integrity metadata.</p></article><article><span class="step-number">02</span><h3>Store an encrypted copy</h3><p>Encrypt the archive on the VPS before uploading it directly to the owner's Google Drive.</p></article><article><span class="step-number">03</span><h3>Prove that it restores</h3><p>Download and decrypt a saved copy, then check its recovery in a separate temporary database.</p></article></div>
+</section>
+<section class="access-panel" aria-labelledby="access"><div><p class="eyebrow">A limited Google permission</p><h2 id="access">Access to backup files.</h2><p>The integration requests <code>drive.file</code>. It is intended to create, read, update and delete only the backup files it creates, and check available account storage. It does not request Gmail access.</p></div><div class="permission-note"><p class="small-label">Requested scope</p><code>https://www.googleapis.com/auth/drive.file</code><p>You choose the Google account and approve access in Google's authorization screen.</p></div></section>
+<section class="closing" aria-labelledby="owner"><h2 id="owner">Owned and controlled by you.</h2><p>This is a personal backup project, rather than a public backup service. The information pages contain no sign-in form and do not connect to Google Drive. Backup archives and credentials are kept outside this public website.</p><p><a class="text-link" href="privacy.html">How data is handled</a><span class="link-separator" aria-hidden="true">/</span><a class="text-link" href="terms.html">Project usage terms</a></p><p class="contact">Owner contact: <a href="mailto:capitalvision4fx@gmail.com">capitalvision4fx@gmail.com</a></p></section></main>
+<footer class="site-footer"><span>Personal backup project · In development</span><span>Updated <time datetime="2026-11-11">11 November 2026</time></span></footer>
+</div>
+</body>
+</html>
